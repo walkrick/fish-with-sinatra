@@ -1,0 +1,28 @@
+<h1>Fish Homepage</h1>
+
+<ul>
+  <% @fish.each_with_index do |fish, index| %>
+  <li>
+    <a href="/fish/<%= index %>">
+    <%= fish[:name] %>
+    </a>
+  </li>
+   <% end %>
+</ul>
+
+<a href="/new">New Fish</a>
+
+<form action="/" method="post">
+
+<div>
+  <label for="name">New fish name:</label>
+  <input type="text" id="name" name="new_item"/>
+</div>
+
+<div class="button">
+  <button type="submit">Submit</button>
+</div>
+
+</form>
+
+
